@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_04_22_044244) do
+ActiveRecord::Schema[7.2].define(version: 2025_04_22_060358) do
   create_table "webhook_bins", force: :cascade do |t|
     t.string "token"
     t.datetime "created_at", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_04_22_044244) do
     t.string "user_agent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "received_at"
     t.index ["webhook_bin_id"], name: "index_webhook_requests_on_webhook_bin_id"
   end
 

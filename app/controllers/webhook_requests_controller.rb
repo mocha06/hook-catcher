@@ -2,7 +2,6 @@ class WebhookRequestsController < ApplicationController
   skip_before_action :verify_authenticity_token
   def create
     webhook_bin = WebhookBin.find_by(token: params[:token])
-    debugger
     @webhook_request = WebhookRequest.new(webhook_bin: webhook_bin, **request_params)
     @webhook_request.save!
     render json: @webhook_request, status: :created
