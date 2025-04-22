@@ -1,0 +1,2 @@
+class WebhookBin < ApplicationRecord
+end
