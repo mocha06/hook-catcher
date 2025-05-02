@@ -16,7 +16,7 @@ class WebhookRequestsController < ApplicationController
       query_string: request.query_string,
       remote_ip: request.remote_ip,
       user_agent: request.user_agent,
-      headers: request.headers.env.select { |k, _| k.start_with?("HTTP_") }.map { |k, v| [k.gsub("HTTP_", ""), v] }.to_h,
+      headers: request.headers.env.select { |k, _| k.start_with?('HTTP_') }.map { |k, v| [k.gsub('HTTP_', ''), v] }.to_h,
       body: request.raw_post
     }
   end
