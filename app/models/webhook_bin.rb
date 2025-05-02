@@ -12,4 +12,9 @@
 #  index_webhook_bins_on_token  (token) UNIQUE
 #
 class WebhookBin < ApplicationRecord
+  has_many :webhook_requests, dependent: :destroy
+
+  def requests
+    webhook_requests.order(created_at: :desc)
+  end
 end
