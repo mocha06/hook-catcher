@@ -9,5 +9,5 @@
 #   policy.microphone  :none
 #   policy.usb         :none
 #   policy.fullscreen  :self
-#   policy.payment     :self, "https://secure.example.com"
+#   policy.payment     :self, 'https://secure.example.com'
 # end
